@@ -4,14 +4,12 @@ import Article from "./Article"
 function ArticleList({posts}){
     const articleElements = posts.map(post=>{
         return (
-            <main>
-                <Article key={post.id} title={post.title} date = {post.date} preview = {post.preview}/>
-            </main>
+                <Article key={post.id} title={post.title} date = {post.date} preview = {post.preview}/>  
         )
     })
 
     //console.log(articleElements)
-    return articleElements;
+    return <main>{articleElements}</main>
 }
 
 export default ArticleList;
